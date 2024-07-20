@@ -1,33 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.gradient {
+  height: fit-content;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px;
+  background-image: radial-gradient(at 27% 37%, #a875f0 0px, transparent 20%),
+    radial-gradient(at 97% 21%, #ee81ee 0px, transparent 50%),
+    radial-gradient(at 52% 99%, #b34be7 0px, transparent 50%),
+    radial-gradient(at 20% 29%, hsla(240, 85%, 65%, 1) 0px, transparent 50%),
+    radial-gradient(at 97% 96%, hsla(260, 65%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 33% 50%, hsla(285, 70%, 80%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 53%, hsla(255, 70%, 85%, 1) 0px, transparent 50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  filter: blur(100px) saturate(150%);
+  top: 20px;
+  opacity: 0.25;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.phone-input-container {
+  width: 224px;
+  border-bottom: 2px solid #80a948;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.phone-input {
+  padding: 0.25rem 0;
+  width: 100%;
+  color: #000;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #80a948;
+}
+
+.phone-input:focus {
+  border-color: #007bff;
+}
+
+.phone-dropdown-button {
+  background-color: transparent;
+  border: none;
+}
+
+.phone-input-field {
+  background: transparent;
+}
+
+.logo-slider {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logo-slider img {
+  height: 64px; /* Adjust based on your logo size */
+  margin-right: 16px; /* Adjust spacing between logos */
+}
+
+/* Tailwind Styles */
+
+.app {
+  @apply z-10 flex justify-center items-center flex-col mx-auto overflow-hidden;
+}
+
+.flex_center {
+  @apply flex justify-center items-center;
+}
+
+.head_text {
+  @apply mt-40 text-3xl font-bold leading-[1.15] text-black sm:text-4xl;
+}
+
+.para {
+  @apply mt-5 text-sm font-medium text-black sm:text-base max-w-2xl;
+}
+
+.para1 {
+  @apply mt-5 text-sm font-medium text-white sm:text-base max-w-2xl;
+}
+
+.para2 {
+  @apply mt-2 text-sm font-medium text-black sm:text-sm max-w-2xl;
+}
+
+.gray-back {
+  @apply w-screen h-screen bg-[#F2F4F7] absolute top-0;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 p-5 px-10 rounded-lg bg-white w-auto flex flex-col gap-2 justify-end items-end opacity-100;
+}
+
+.dropdown-link {
+  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+}
+
+.input-style {
+  @apply py-1 w-[300px] sm:w-[224px] placeholder-slate-500 text-base text-black border-b-2 border-[#80A948] outline-none focus:border-blue-500 bg-transparent;
+}
+
+/* Section 2 */
+
+.head_text1 {
+  @apply text-3xl font-bold leading-[1.15] text-black sm:text-4xl mt-20;
+}
+
+.head_text2 {
+  @apply text-3xl font-bold leading-[1.15] text-white sm:text-3xl mt-20;
+}
+.tech-font {
+  @apply font-medium text-sm text-slate-600 pt-5;
+}
+.tech-font1 {
+  @apply font-medium text-sm text-slate-600 pt-2;
+}
+
+.yellow_gradient {
+  @apply bg-gradient-to-r from-[#FABC1F] to-[#7CA546];
 }
