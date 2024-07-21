@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="main gray-back">
           {/*<div className="gray-back" />*/}
-          <div className="max-lg:hidden w-[46.5%] h-full absolute top-0 right-0">
+          <div className="max-xl:hidden w-[46.5%] h-full absolute top-0 right-0">
             <Image
               src="/images/Frame_final.svg"
               alt="Frame"

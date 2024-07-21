@@ -7,7 +7,7 @@ import { links } from "@constants";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <header className="bg-white h-[80px] w-[90%] lg:w-[1220px] flex absolute top-6 left-1/2 transform -translate-x-1/2 items-center justify-between shadow-md z-20 px-6 rounded-xl">
+    <header className="bg-white h-[80px] w-[90%] xl:w-[1220px] flex absolute top-6 left-1/2 transform -translate-x-1/2 items-center justify-between shadow-md z-20 px-6 rounded-xl">
       <Link href="/">
         <Image
           src="/images/Logo_new.png"
@@ -75,7 +75,7 @@ const Navbar = () => {
         )}
       </nav>
 
-      <div className=" hidden sm:flex gap-4">
+      <div className=" hidden xl:flex gap-4">
         <div className="flex gap-2 justify-center items-center cursor-pointer">
           <Image
             src="/images/Phone.svg"

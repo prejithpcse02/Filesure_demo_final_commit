@@ -9,9 +9,9 @@ import { acc1, acc2 } from "@constants";
 const Faq = () => {
   return (
     <section className="w-screen bg-white">
-      <div className="max-w-[90vw] sm:max-w-[1120px] mx-auto mb-32">
+      <div className="max-w-[90vw] xl:max-w-[1120px] mx-auto mb-32">
         <h1 className="head_text1">FAQ</h1>
-        <div className="flex sm:flex-row flex-col justify-between mt-10 gap-10">
+        <div className="flex xl:flex-row flex-col justify-between mt-10 gap-10">
           <div className="flex flex-col flex-1">
             {acc1.map((acc, i) => (
               <Accordion key={i} type="single" collapsible>

@@ -42,7 +42,7 @@ const Team = () => {
 
   return (
     <section className="w-screen bg-[#F2F4F7]">
-      <div className="max-w-[90vw] sm:max-w-[1120px] min-h-[468px] mx-auto flex sm:flex-row flex-col justify-between max-sm:gap-8">
+      <div className="max-w-[90vw] xl:max-w-[1120px] min-h-[468px] mx-auto flex xl:flex-row flex-col justify-between max-xl:gap-8">
         <div className="flex flex-col gap-8 max-w-[560px]">
           <h1 className="head_text1">Our Team</h1>
           <p className="para2">

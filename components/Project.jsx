@@ -25,8 +25,8 @@ const Project = () => {
     }));
   };
   return (
-    <section className="w-screen h-auto sm:min-h-[350px] yellow_gradient">
-      <div className="max-w-[90vw] sm:max-w-[1120px] mx-auto flex sm:flex-row flex-col justify-between">
+    <section className="w-screen h-auto xl:min-h-[350px] yellow_gradient">
+      <div className="max-w-[90vw] xl:max-w-[1120px] mx-auto flex sm:flex-row flex-col justify-between">
         <div className="flex flex-col">
           <h1 className="head_text2 flex">
             Let&apos;s discuss <br />
@@ -38,7 +38,7 @@ const Project = () => {
             development
           </p>
         </div>
-        <form className="w-full sm:w-[520px] flex flex-col gap-4 bg-white rounded-xl mt-20 px-6 py-4 mb-6">
+        <form className="w-[90%] xl:w-[520px] flex flex-col gap-4 bg-white rounded-xl mt-20 px-3 py-4 mb-6">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex flex-col flex-1">
               <label className="flex flex-col w-[224px]">

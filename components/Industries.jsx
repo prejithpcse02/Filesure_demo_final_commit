@@ -97,13 +97,13 @@ const Industries = () => {
   return (
     <section className="w-screen flex flex-col mt-20 bg-[#F2F4F7] pb-10">
       <h1
-        className="head_text text-center max-w-[90vw] sm:w-[660px] mx-auto"
+        className="head_text text-center max-w-[90vw] xl:w-[660px] mx-auto"
         id="title"
       >
         Developed more than <span className="text-[#80A948]">100</span> projects
         in <span className="text-[#80A948]">15</span> industries
       </h1>
-      <div className="sm:min-w-[1120px] sm:mx-auto max-sm:max-w-[90vw] flex sm:flex-row flex-col max-sm:pl-9 sm:gap-48 mt-20">
+      <div className="xl:min-w-[1120px] sm:mx-auto max-w-[90vw] flex sm:flex-row flex-col max-sm:pl-9 xl:gap-48 mt-20">
         <div className="flex flex-col gap-4 " id="industry1">
           {list1.map((item, i) => (
             <div key={i} className="flex gap-6 industry-item">
@@ -153,7 +153,7 @@ const Industries = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-[90vw] sm:max-w-[1120px] flex flex-col items-start mt-20 mx-auto">
+      <div className="max-w-[90vw] xl:max-w-[1120px] flex flex-col items-start mt-20 mx-auto">
         <h2 className="head_text1">Projects we are proud of</h2>
         <p className="para">
           Crafted an innovative rental property management app, seamlessly

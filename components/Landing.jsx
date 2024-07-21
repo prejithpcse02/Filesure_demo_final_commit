@@ -43,7 +43,7 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="sm:w-[700px] flex flex-wrap z-10 relative sm:pl-16 h-fit">
+    <div className="xl:w-[700px] flex flex-wrap z-10 relative xl:pl-16">
       <h1 className="head_text text-left" id="home-animation">
         <span className="text-[#FFBA00]">User Centric Excellence</span>: Our App
         Development Services Tackles Your Pain Points

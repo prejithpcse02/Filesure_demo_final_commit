@@ -41,9 +41,9 @@ const Application = () => {
   }, []);
 
   return (
-    <section className="max-w-[90vw] sm:max-w-[1120px] mx-auto bg-white">
+    <section className="max-w-[90vw] xl:max-w-[1120px] mx-auto bg-white">
       <h1 className="head_text1">Application Development Stages</h1>
-      <div className="flex sm:flex-row flex-col items-center gap-8 sm:gap-0 sm:justify-between my-16">
+      <div className="flex sm:flex-row flex-col items-center gap-8 sm:gap-2 sm:justify-between my-16">
         <div className="flex flex-col gap-5 max-w-[392px]">
           {desc1.map((desc, i) => (
             <div

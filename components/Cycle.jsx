@@ -7,7 +7,7 @@ const Cycle = () => {
     <section className="w-screen flex flex-col">
       <Slider />
       <div className="min-w-[1120px] mx-auto flex flex-col sm:flex-row">
-        <div className="flex-1 max-w-[90vw] sm:max-w-[496px] px-10">
+        <div className="flex-1 max-w-[90vw] xl:max-w-[496px] px-10">
           <h1 className="head_text1">Full Development Cycle</h1>
           <p className="para mt-4">We use proven technologies</p>
           <div className="pt-8">

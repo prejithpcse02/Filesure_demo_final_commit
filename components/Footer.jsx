@@ -26,7 +26,7 @@ const Footer = () => {
   ];
   return (
     <section className="w-screen bg-[#111111]">
-      <div className="max-w-[90vw] sm:max-w-[1120px] mx-auto pt-20 pb-8 flex flex-col gap-8 sm:items-center">
+      <div className="max-w-[90vw] xl:max-w-[1120px] mx-auto pt-20 pb-8 flex flex-col gap-8 sm:items-center">
         <Image
           src="/images/Footerlogo.svg"
           alt="Logo"
