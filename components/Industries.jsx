@@ -1,83 +1,112 @@
 "use client";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { list1, list2, list3, content } from "@constants";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Industries = () => {
-  const list1 = [
-    { name: "Social Media", icon: "/images/right.svg" },
-    { name: "Fitness & Sports", icon: "/images/right.svg" },
-    { name: "Bank", icon: "/images/right.svg" },
-    { name: "Construction", icon: "/images/right.svg" },
-    { name: "Game Projects", icon: "/images/right.svg" },
-  ];
-  const list2 = [
-    { name: "Education", icon: "/images/right.svg" },
-    { name: "Auto & Transport", icon: "/images/right.svg" },
-    { name: "Medicine & Health", icon: "/images/right.svg" },
-    { name: "Restraunt & Food Delivery", icon: "/images/right.svg" },
-    { name: "Market Place", icon: "/images/right.svg" },
-  ];
-  const list3 = [
-    { name: "AR Technology", icon: "/images/right.svg" },
-    { name: "TV Series", icon: "/images/right.svg" },
-    { name: "Startups", icon: "/images/right.svg" },
-    { name: "Regions", icon: "/images/right.svg" },
-    { name: "Online Services", icon: "/images/right.svg" },
-  ];
+  useEffect(() => {
+    // Ensure this runs only on the client side
+
+    const staggerOptions = { stagger: 0.1 };
+
+    gsap.fromTo(
+      "#industry1 .industry-item",
+      { x: -250, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: staggerOptions.stagger,
+        scrollTrigger: {
+          trigger: "#industry1",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 85%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#industry2 .industry-item",
+      { x: -250, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: staggerOptions.stagger,
+        scrollTrigger: {
+          trigger: "#industry2",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 85%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#industry3 .industry-item",
+      { x: -250, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: staggerOptions.stagger,
+        scrollTrigger: {
+          trigger: "#industry3",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 85%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#project_left",
+      { x: -250, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#project_left",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 85%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      "#project_right",
+      { x: 250, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: "#project_right",
+          toggleActions: "restart reverse restart reverse",
+          start: "top 85%",
+        },
+      }
+    );
+  }, []);
+
   const [activePage, setActivePage] = useState(1);
 
-  const content = {
-    1: {
-      title: "Project 1",
-      text: "Crafted an innovative rental property management app, seamlessly integrating secure login, absence registration, and a tenant notice board. Elevating the resident experience with user-friendly design and efficient communication channels",
-      tech: "Business Analyst / iOS / Android / QA / UI/UX Design",
-      country: "India",
-      sector: "Real Estate",
-      growth: "400%",
-      active: "+200000",
-      img: "/images/Phone1.svg",
-    },
-    2: {
-      title: "Project 2",
-      text: "Crafted an innovative rental property management app, seamlessly integrating secure login, absence registration, and a tenant notice board. Elevating the resident experience with user-friendly design and efficient communication channels",
-      tech: "Software Development / iOS / Android / QA / UI/UX Design",
-      country: "India",
-      sector: "Real Estate",
-      growth: "200%",
-      active: "+100000",
-      img: "/images/Phone3.svg",
-    },
-    3: {
-      title: "Project 3",
-      text: "Crafted an innovative rental property management app, seamlessly integrating secure login, absence registration, and a tenant notice board. Elevating the resident experience with user-friendly design and efficient communication channels",
-      tech: "Business Analyst / iOS / Android / QA / UI/UX Design",
-      country: "India",
-      sector: "Real Estate",
-      growth: "400%",
-      active: "+200000",
-      img: "/images/Phone1.svg",
-    },
-    4: {
-      title: "Project 2",
-      text: "Crafted an innovative rental property management app, seamlessly integrating secure login, absence registration, and a tenant notice board. Elevating the resident experience with user-friendly design and efficient communication channels",
-      tech: "Software Development / iOS / Android / QA / UI/UX Design",
-      country: "India",
-      sector: "Real Estate",
-      growth: "200%",
-      active: "+100000",
-      img: "/images/Phone3.svg",
-    },
-  };
   return (
-    <section className="w-screen flex flex-col mt-20 bg-[#F2F4F7]">
-      <h1 className="head_text text-center w-[660px] mx-auto">
+    <section className="w-screen flex flex-col mt-20 bg-[#F2F4F7] pb-10">
+      <h1
+        className="head_text text-center max-w-[90vw] sm:w-[660px] mx-auto"
+        id="title"
+      >
         Developed more than <span className="text-[#80A948]">100</span> projects
         in <span className="text-[#80A948]">15</span> industries
       </h1>
-      <div className="min-w-[1120px] mx-auto flex gap-48 mt-20">
-        <div className="flex flex-col">
+      <div className="sm:min-w-[1120px] sm:mx-auto max-sm:max-w-[90vw] flex sm:flex-row flex-col max-sm:pl-9 sm:gap-48 mt-20">
+        <div className="flex flex-col gap-4 " id="industry1">
           {list1.map((item, i) => (
-            <div key={i} className="flex gap-6">
+            <div key={i} className="flex gap-6 industry-item">
               <div className="w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center">
                 <Image
                   src={item.icon}
@@ -91,9 +120,9 @@ const Industries = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4 " id="industry2">
           {list2.map((item, i) => (
-            <div key={i} className="flex gap-6">
+            <div key={i} className="flex gap-6 industry-item">
               <div className="w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center">
                 <Image
                   src={item.icon}
@@ -107,9 +136,9 @@ const Industries = () => {
             </div>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4 " id="industry3">
           {list3.map((item, i) => (
-            <div key={i} className="flex gap-6">
+            <div key={i} className="flex gap-6 industry-item">
               <div className="w-[30px] h-[30px] bg-white rounded-full flex justify-center items-center">
                 <Image
                   src={item.icon}
@@ -124,7 +153,7 @@ const Industries = () => {
           ))}
         </div>
       </div>
-      <div className="max-w-[1120px] flex flex-col items-start mt-20 mx-auto">
+      <div className="max-w-[90vw] sm:max-w-[1120px] flex flex-col items-start mt-20 mx-auto">
         <h2 className="head_text1">Projects we are proud of</h2>
         <p className="para">
           Crafted an innovative rental property management app, seamlessly
@@ -132,7 +161,7 @@ const Industries = () => {
           board. Elevating the resident experience with user-friendly design and
           efficient communication channels
         </p>
-        <div className="flex space-x-4 my-8">
+        <div className="sm:flex gap-4 sm:space-x-4 my-8">
           {Object.keys(content).map((page) => (
             <button
               key={page}
@@ -148,28 +177,28 @@ const Industries = () => {
           ))}
         </div>
         <div className="flex flex-row gap-20 w-full">
-          <div className="w-1/2">
+          <div className=" flex-1 sm:w-1/2" id="project_left">
             <h2 className="head_text1">{content[activePage].title}</h2>
             <p className="para">{content[activePage].text}</p>
             <p className="tech-font">{content[activePage].tech}</p>
             <div className="flex mt-5 gap-5">
-              <div className="flex gap-2">
+              <div className="flex justify-center items-center gap-2">
                 <Image
-                  src="/images/right.svg"
+                  src="/icons-industries/location.svg"
                   alt="location"
                   width={20}
                   height={20}
                 />
-                <span className="para">{content[activePage].country}</span>
+                <span className="para_link">{content[activePage].country}</span>
               </div>
               <div className="flex gap-2">
                 <Image
-                  src="/images/right.svg"
-                  alt="location"
+                  src="/icons-industries/real.svg"
+                  alt="real estate"
                   width={20}
                   height={20}
                 />
-                <span className="para">{content[activePage].sector}</span>
+                <span className="para_link">{content[activePage].sector}</span>
               </div>
             </div>
             <div className="flex gap-12 mt-5">
@@ -201,7 +230,7 @@ const Industries = () => {
               />
             </div>
           </div>
-          <div className="w-1/2 p-8">
+          <div className="hidden sm:flex w-1/2 p-8" id="project_right">
             <Image
               src={content[activePage].img}
               alt="Static Image"

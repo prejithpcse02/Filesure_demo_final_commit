@@ -2,17 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { links } from "@constants";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
-  const links = ["Services", "Media", "Cases", "FAQ", "Contacts"];
   return (
-    <header className="bg-white h-[80px] w-[90%] lg:w-[1220px] flex absolute top-6 left-1/2 transform -translate-x-1/2 items-center justify-between shadow-md z-20 px-6 rounded-xl opacity-95">
+    <header className="bg-white h-[80px] w-[90%] lg:w-[1220px] flex absolute top-6 left-1/2 transform -translate-x-1/2 items-center justify-between shadow-md z-20 px-6 rounded-xl">
       <Link href="/">
         <Image
-          src="/images/Logo.svg"
+          src="/images/Logo_new.png"
           alt="Logo"
-          width={140}
+          width={180}
           height={60}
           className="bg-transparent"
         />
@@ -76,7 +76,7 @@ const Navbar = () => {
       </nav>
 
       <div className=" hidden sm:flex gap-4">
-        <div className="flex gap-2 justify-center items-center">
+        <div className="flex gap-2 justify-center items-center cursor-pointer">
           <Image
             src="/images/Phone.svg"
             alt="phone"
@@ -85,7 +85,7 @@ const Navbar = () => {
           />
           <span className="text-[#80A948] text-sm">+91 0000000000</span>
         </div>
-        <div className="flex gap-2 justify-center items-center">
+        <div className="flex gap-2 justify-center items-center cursor-pointer">
           <Image src="/images/Mail.svg" alt="mail" width={19.8} height={15.8} />
           <span className="text-[#80A948] text-sm">demo@gmail.com</span>
         </div>

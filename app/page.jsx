@@ -1,5 +1,7 @@
 import Application from "@components/Application";
 import Cycle from "@components/Cycle";
+import Faq from "@components/Faq";
+import Footer from "@components/Footer";
 import Industries from "@components/Industries";
 import Landing from "@components/Landing";
 import Navbar from "@components/Navbar";
@@ -19,6 +21,8 @@ const Home = () => {
         <Project />
         <Application />
         <Team />
+        <Faq />
+        <Footer />
       </div>
     </section>
   );

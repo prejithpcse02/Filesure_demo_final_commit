@@ -69,7 +69,7 @@ const Landing = () => {
         <form className="w-full sm:w-[676px] flex flex-col sm:flex-row gap-4 mt-4">
           <div className="flex flex-col flex-1">
             <label className="flex flex-col w-[224px]">
-              <span className="text-[#667085] text-sm font-medium mb-1">
+              <span className="text-[#667085] text-sm font-medium mb-1 ">
                 Full name
               </span>
               <input
@@ -78,7 +78,7 @@ const Landing = () => {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="My Name"
-                className="input-style"
+                className="input-style mt-2"
               />
             </label>
             <label className="flex flex-col mt-4 w-[224px]">
@@ -113,7 +113,8 @@ const Landing = () => {
                   padding: "0 0 0 35px ",
                   width: "100%",
                   color: "#000",
-                  fontSize: "1rem",
+                  fontSize: "0.875rem",
+                  lineHeight: "1.25rem",
                   backgroundColor: "transparent",
                   border: "none",
                   outline: "none",
@@ -143,7 +144,7 @@ const Landing = () => {
             </label>
           </div>
           <div className="flex flex-1 items-end px-2">
-            <button className="text-white bg-[#80A948] py-2 px-4 rounded w-[132px] h-[68px]">
+            <button className="text-white bg-[#80A948] hover:bg-[#698b38] transition-all py-2 px-4 rounded w-[132px] h-[68px]">
               Get Consultation
             </button>
           </div>
